@@ -8,6 +8,7 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx . --color && prettier --check './**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.7.0",
     "@types/node": "^15.6.0",
     "@types/react": "^17.0.6",
     "@types/react-dom": "^17.0.5",
@@ -33,7 +34,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.2.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "web3": "^1.6.1"
   },
   "devDependencies": {
     "@types/node": "16.11.11",

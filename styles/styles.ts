@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 export const Styles = createGlobalStyle`
 
@@ -109,4 +109,11 @@ export const Styles = createGlobalStyle`
     .ant-drawer-content-wrapper {
         width: 300px !important;
     }
-`;
+
+    .ant-list-item {
+        transition: 0.5s;
+        &:hover {
+            color: rgb(255, 130, 92);
+        }
+    }
+`

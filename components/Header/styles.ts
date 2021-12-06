@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import { MenuOutlined } from '@ant-design/icons'
-
 export const HeaderSection = styled('header')`
   padding: 1rem 0.5rem;
-
   .ant-row-space-between {
     align-items: center;
     text-align: center;
@@ -73,6 +71,17 @@ export const CustomNavLinkSmall = styled(NavLink)`
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
+  }
+`
+
+export const CustomNavLinkSocial = styled(NavLink)`
+  font-size: 1.2rem;
+  color: #18216d;
+  transition: color 0.2s ease-in;
+  margin: 0.5rem 1rem;
+
+  @media only screen and (max-width: 768px) {
+    margin: 1.25rem 1rem;
   }
 `
 

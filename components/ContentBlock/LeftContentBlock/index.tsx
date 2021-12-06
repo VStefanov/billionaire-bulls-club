@@ -1,8 +1,8 @@
-import { Row, Col } from "antd";
-import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../../common/SvgIcon";
-import { ContentBlockProps } from "../types";
-import { Fade } from "react-awesome-reveal";
+import { Row, Col } from 'antd'
+import { withTranslation } from 'react-i18next'
+import { SvgIcon } from '../../../common/SvgIcon'
+import { ContentBlockProps } from '../types'
+import { Fade } from 'react-awesome-reveal'
 import {
   LeftContentSection,
   Content,
@@ -10,7 +10,7 @@ import {
   ServiceWrapper,
   MinTitle,
   MinPara,
-} from "./styles";
+} from './styles'
 
 const LeftContentBlock = ({
   icon,
@@ -30,10 +30,10 @@ const LeftContentBlock = ({
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
+              {content && <Content>{t(content)}</Content>}
               <ServiceWrapper>
                 <Row justify="space-between">
-                  {typeof section === "object" &&
+                  {typeof section === 'object' &&
                     section.map((item: any, id: number) => {
                       return (
                         <Col key={id} span={11}>
@@ -41,7 +41,7 @@ const LeftContentBlock = ({
                           <MinTitle>{t(item.title)}</MinTitle>
                           <MinPara>{t(item.content)}</MinPara>
                         </Col>
-                      );
+                      )
                     })}
                 </Row>
               </ServiceWrapper>
@@ -50,7 +50,7 @@ const LeftContentBlock = ({
         </Row>
       </Fade>
     </LeftContentSection>
-  );
-};
+  )
+}
 
-export default withTranslation()(LeftContentBlock);
+export default withTranslation()(LeftContentBlock)

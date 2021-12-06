@@ -3,6 +3,10 @@ export interface ContainerProps {
   children: React.ReactNode
 }
 
+export interface ContainerWithBackgroundProps {
+  children: React.ReactNode
+}
+
 export interface ButtonProps {
   color?: string
   fixedWidth?: boolean

@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { Row, Col, Drawer } from 'antd'
 import { withTranslation } from 'react-i18next'
+import { InstagramOutlined, TwitterOutlined } from '@ant-design/icons'
+import Link from 'next/link'
 import Container from '../../common/Container'
 import { SvgIcon } from '../../common/SvgIcon'
 import { Button } from '../../common/Button'
@@ -11,6 +13,7 @@ import {
   NotHidden,
   Menu,
   CustomNavLinkSmall,
+  CustomNavLinkSocial,
   Label,
   Outline,
   Span,
@@ -40,20 +43,42 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo('about')}>
           <Span>{t('About')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo('mission')}>
-          <Span>{t('Mission')}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('roadmap')}>
+          <Span>{t('Roadmap')}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo('product')}>
-          <Span>{t('Product')}</Span>
+        <CustomNavLinkSmall onClick={() => scrollTo('faq')}>
+          <Span>{t(`FAQ'S`)}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall onClick={() => scrollTo('team')}>
+          <Span>{t(`TEAM`)}</Span>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall>
+          <Span></Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: '180px' }}
           onClick={() => scrollTo('contact')}
         >
           <Span>
-            <Button>{t('Contact')}</Button>
+            <Button>{t('Join Discord')}</Button>
           </Span>
         </CustomNavLinkSmall>
+        <CustomNavLinkSocial>
+          <Link href="https://www.instagram.com/">
+            <InstagramOutlined
+              style={{ fontSize: '30px' }}
+              className="ant-list-item"
+            />
+          </Link>
+        </CustomNavLinkSocial>
+        <CustomNavLinkSocial>
+          <Link href="https://www.twitter.com/">
+            <TwitterOutlined
+              style={{ fontSize: '30px' }}
+              className="ant-list-item"
+            />
+          </Link>
+        </CustomNavLinkSocial>
       </>
     )
   }
