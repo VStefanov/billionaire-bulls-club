@@ -11,7 +11,7 @@ import Container from '../common/Container'
 import ContainerWithBackground from '../common/ContainerWithBackground'
 import ScrollToTop from '../common/ScrollToTop'
 import ContentBlock from '../components/ContentBlock'
-import Header from '../components/header'
+import Header from '../components/Header'
 import React from 'react'
 
 const Home = () => {

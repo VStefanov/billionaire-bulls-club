@@ -4,7 +4,7 @@ import { ContainerWithBackgroundProps } from '../types'
 const ContainerWithBackground = ({
   children,
 }: ContainerWithBackgroundProps) => (
-  <Container image="img/cheeky.jpeg">{children}</Container>
+  <Container image="img/bull.svg">{children}</Container>
 )
 
 export default ContainerWithBackground
