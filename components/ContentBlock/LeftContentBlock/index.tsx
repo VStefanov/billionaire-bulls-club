@@ -1,5 +1,5 @@
 import { Row, Col } from 'antd'
-import { withTranslation } from 'react-i18next'
+import { withTranslation } from 'next-i18next'
 import { SvgIcon } from '../../../common/SvgIcon'
 import { ContentBlockProps } from '../types'
 import { Fade } from 'react-awesome-reveal'

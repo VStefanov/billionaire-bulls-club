@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { MenuOutlined } from '@ant-design/icons'
 export const HeaderSection = styled('header')`
+  background-color: rgba(26, 26, 26, 0.21);
   padding: 1rem 0.5rem;
   .ant-row-space-between {
     align-items: center;
@@ -106,7 +107,5 @@ export const Span = styled('span')`
   &:active,
   &:focus {
     color: rgb(255, 130, 92);
-    text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
   }
 `

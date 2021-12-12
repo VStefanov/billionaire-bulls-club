@@ -5,4 +5,5 @@ export const ContainerWithBackground = styled('div')<any>`
   width: 100%;
   min-height: 800px;
   background-image: ${(p) => (p.image ? `url("${p.image}");` : '')};
+  margin-bottom: 7rem;
 `

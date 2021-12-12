@@ -1,9 +1,9 @@
-import { Row, Col } from "antd";
-import { withTranslation } from "react-i18next";
-import { SvgIcon } from "../../common/SvgIcon";
-import Container from "../../common/Container";
+import { Row, Col } from 'antd'
+import { withTranslation } from 'next-i18next'
+import { SvgIcon } from '../../common/SvgIcon'
+import Container from '../../common/Container'
 
-import i18n from "i18next";
+import i18next from 'i18next'
 import {
   FooterSection,
   Title,
@@ -19,17 +19,21 @@ import {
   Label,
   LanguageSwitch,
   LanguageSwitchContainer,
-} from "./styles";
+} from './styles'
 
 interface SocialLinkProps {
-  href: string;
-  src: string;
+  href: string
+  src: string
 }
 
 const Footer = ({ t }: any) => {
   const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+    i18next.init()
+    console.log('language')
+    console.log(language)
+    console.log('language')
+    i18next.changeLanguage(language)
+  }
 
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
@@ -42,8 +46,8 @@ const Footer = ({ t }: any) => {
       >
         <SvgIcon src={src} width="25px" height="25px" />
       </a>
-    );
-  };
+    )
+  }
 
   return (
     <>
@@ -51,8 +55,8 @@ const Footer = ({ t }: any) => {
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
+              <Language>{t('Contact')}</Language>
+              <Large href="/">{t('Tell us everything')}</Large>
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
@@ -61,51 +65,51 @@ const Footer = ({ t }: any) => {
               </a>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Policy")}</Title>
-              <Large to="/" left="true">
-                {t("Application Security")}
+              <Title>{t('Policy')}</Title>
+              <Large href="/" left="true">
+                {t('Application Security')}
               </Large>
-              <Large left="true" to="/">
-                {t("Software Principles")}
+              <Large left="true" href="/">
+                {t('Software Principles')}
               </Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Empty />
-              <Large left="true" to="/">
-                {t("Support Center")}
+              <Large left="true" href="/">
+                {t('Support Center')}
               </Large>
-              <Large left="true" to="/">
-                {t("Customer Support")}
+              <Large left="true" href="/">
+                {t('Customer Support')}
               </Large>
             </Col>
           </Row>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Empty />
-              <Language>{t("Address")}</Language>
+              <Language>{t('Address')}</Language>
               <Para>Rancho Santa Margarita</Para>
               <Para>2131 Elk Street</Para>
               <Para>California</Para>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large left="true" to="/">
-                {t("About")}
+              <Title>{t('Company')}</Title>
+              <Large left="true" href="/">
+                {t('About')}
               </Large>
-              <Large left="true" to="/">
-                {t("Blog")}
+              <Large left="true" href="/">
+                {t('Blog')}
               </Large>
-              <Large left="true" to="/">
-                {t("Press")}
+              <Large left="true" href="/">
+                {t('Press')}
               </Large>
-              <Large left="true" to="/">
-                {t("Careers & Culture")}
+              <Large left="true" href="/">
+                {t('Careers & Culture')}
               </Large>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
-              <Label htmlFor="select-lang">{t("Language")}</Label>
+              <Label htmlFor="select-lang">{t('Language')}</Label>
               <LanguageSwitchContainer>
-                <LanguageSwitch onClick={() => handleChange("en")}>
+                <LanguageSwitch onClick={() => handleChange('en')}>
                   <SvgIcon
                     src="united-states.svg"
                     aria-label="homepage"
@@ -113,7 +117,7 @@ const Footer = ({ t }: any) => {
                     height="30px"
                   />
                 </LanguageSwitch>
-                <LanguageSwitch onClick={() => handleChange("es")}>
+                <LanguageSwitch onClick={() => handleChange('es')}>
                   <SvgIcon
                     src="spain.svg"
                     aria-label="homepage"
@@ -131,9 +135,9 @@ const Footer = ({ t }: any) => {
           <Row
             justify="space-between"
             align="middle"
-            style={{ paddingTop: "3rem" }}
+            style={{ paddingTop: '3rem' }}
           >
-            <NavLink to="/">
+            <NavLink href="/">
               <LogoContainer>
                 <SvgIcon
                   src="logo.svg"
@@ -171,7 +175,7 @@ const Footer = ({ t }: any) => {
         </Container>
       </Extra>
     </>
-  );
-};
+  )
+}
 
-export default withTranslation()(Footer);
+export default withTranslation()(Footer)

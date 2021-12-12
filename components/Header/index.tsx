@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Row, Col, Drawer } from 'antd'
-import { withTranslation } from 'react-i18next'
+import { withTranslation } from 'next-i18next'
 import { InstagramOutlined, TwitterOutlined } from '@ant-design/icons'
 import Link from 'next/link'
 import Container from '../../common/Container'

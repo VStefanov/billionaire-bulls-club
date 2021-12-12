@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import Link from 'next/link'
 
 export const FooterSection = styled('footer')`
+  margin-top: 12rem;
   background: rgb(241, 242, 243);
   padding: 2.5rem 0;
 `
@@ -30,6 +31,7 @@ export const NavLink = styled(Link)`
 `
 
 export const Extra = styled('section')`
+  margin-top: 7rem;
   background: rgb(241, 242, 243);
   position: relative;
   width: 100%;
