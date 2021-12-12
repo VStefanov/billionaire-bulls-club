@@ -66,7 +66,7 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSocial>
           <Link href="https://www.instagram.com/">
             <InstagramOutlined
-              style={{ fontSize: '30px' }}
+              style={{ fontSize: '30px', color: 'white' }}
               className="ant-list-item"
             />
           </Link>
@@ -74,7 +74,7 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSocial>
           <Link href="https://www.twitter.com/">
             <TwitterOutlined
-              style={{ fontSize: '30px' }}
+              style={{ fontSize: '30px', color: 'white' }}
               className="ant-list-item"
             />
           </Link>

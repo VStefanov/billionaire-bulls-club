@@ -1,19 +1,6 @@
 import { Carousel } from 'antd'
 import styled from 'styled-components'
 
-export const ContentWrapper = styled('div')`
-  position: relative;
-  max-width: 540px;
-
-  @media only screen and (max-width: 575px) {
-    padding-bottom: 4rem;
-  }
-`
-
-export const Content = styled('p')`
-  margin: 1.5rem 0 2rem 0;
-`
-
 export const ServiceWrapper = styled('div')`
   display: flex;
   justify-content: space-between;
@@ -51,5 +38,29 @@ export const CarouselWrapper = styled(Carousel)`
     height: 7px;
     border-radius: 100%;
     background: red;
+  }
+`
+
+export const MiddleBlockSection = styled('section')`
+  position: relative;
+  padding: 0.5rem 0 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 1024px) {
+    padding: 5.5rem 0 3rem;
+  }
+`
+
+export const Content = styled('p')`
+  padding: 0.75rem 0 0.75rem;
+`
+
+export const ContentWrapper = styled('div')`
+  max-width: 570px;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
   }
 `
