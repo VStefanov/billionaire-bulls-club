@@ -86,7 +86,7 @@ const Header = ({ t }: any) => {
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <Row justify="space-between" align="middle">
           <LogoContainer>
             <SvgIcon src="logo.svg" width="101px" height="64px" />
           </LogoContainer>

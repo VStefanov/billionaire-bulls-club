@@ -53,6 +53,8 @@ export const Burger = styled('div')`
 `
 
 export const NotHidden = styled('div')`
+  display: flex;
+  align-items: center;
   @media only screen and (max-width: 890px) {
     display: none;
   }
@@ -74,6 +76,10 @@ export const CustomNavLinkSmall = styled(NavLink)`
 
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
+  }
+
+  @media only screen and (max-width: 890px) {
+    color: black;
   }
 `
 

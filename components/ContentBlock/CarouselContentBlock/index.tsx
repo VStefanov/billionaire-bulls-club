@@ -56,7 +56,7 @@ const CarouselContentBlock = ({
               // autoplay
               dotPosition="bottom"
               afterChange={(e) => {
-                document.body.style.backgroundColor = colors[e]
+                // document.body.style.backgroundColor = colors[e]
                 document.body.style.transition = '0.5s'
               }}
             >

@@ -5,7 +5,11 @@ export const ContainerWithBackground = styled('div')<any>`
   width: 100%;
   background-repeat: repeat-y;
   background-size: cover;
-  min-height: 800px;
+  background-position: center center;
   background-image: ${(p) => (p.image ? `url("${p.image}");` : '')};
+  min-height: 800px;
+  @media only screen and (max-width: 890px) {
+    min-height: inherit;
+  }
   margin-bottom: 7rem;
 `
