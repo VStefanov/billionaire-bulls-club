@@ -99,21 +99,4 @@ export const Styles = createGlobalStyle`
         text-align: center;
     }
 
-    .ant-drawer-body {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        padding-top: 1.5rem;
-    }
-
-    .ant-drawer-content-wrapper {
-        width: 300px !important;
-    }
-
-    .ant-list-item {
-        transition: 0.5s;
-        &:hover {
-            color: rgb(255, 130, 92);
-        }
-    }
 `
