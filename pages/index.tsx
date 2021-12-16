@@ -12,6 +12,7 @@ import Header from '../components/Header'
 import React from 'react'
 import Footer from '../components/Footer'
 import TeamMembersBlock from '../components/ContentBlock/TeamMembersBlock'
+import VerticalTimelineComponent from '../components/ContentBlock/VerticalTimelineContentBlock'
 
 const Home = () => {
   return (
@@ -36,12 +37,7 @@ const Home = () => {
           icon="developer.svg"
           id="intro"
         />
-        <MiddleBlock
-          title={RoadmapConent.title}
-          content={RoadmapConent.text}
-          button={RoadmapConent.button}
-          contentWrapper={false}
-        />
+        <VerticalTimelineComponent title="Roadmap" />
         <ContentBlock
           type="right"
           title={NFTContent.title}

@@ -29,47 +29,45 @@ const CarouselContentBlock = ({
 }: ContentBlockProps) => {
   return (
     <div>
-      <Fade direction="left">
-        <Row justify="space-between" align="middle" id={id}>
-          <Col lg={11} md={11} sm={12} xs={24}>
-            <ContentWrapper>
-              <h6>{t(title)}</h6>
-              {content && <Content>{t(content)}</Content>}
-              <ServiceWrapper>
-                <Row justify="space-between">
-                  {typeof section === 'object' &&
-                    section.map((item: any, id: number) => {
-                      return (
-                        <Col key={id} span={11}>
-                          <SvgIcon src={item.icon} width="60px" height="60px" />
-                          <MinTitle>{t(item.title)}</MinTitle>
-                          <MinPara>{t(item.content)}</MinPara>
-                        </Col>
-                      )
-                    })}
-                </Row>
-              </ServiceWrapper>
-            </ContentWrapper>
-          </Col>
-          <Col lg={11} md={11} sm={11} xs={24}>
-            <Carousel
-              // autoplay
-              dotPosition="bottom"
-              afterChange={(e) => {
-                // document.body.style.backgroundColor = colors[e]
-                document.body.style.transition = '0.5s'
-              }}
-            >
-              <CarouselItem src="/img/svg/1.png" />
-              <CarouselItem src="/img/svg/3.png" />
-              <CarouselItem src="/img/svg/7.png" />
-              <CarouselItem src="/img/svg/10.png" />
-              <CarouselItem src="/img/svg/15.png" />
-              <CarouselItem src="/img/svg/16.png" />
-            </Carousel>
-          </Col>
-        </Row>
-      </Fade>
+      <Row justify="space-between" align="middle" id={id}>
+        <Col lg={11} md={11} sm={12} xs={24}>
+          <ContentWrapper>
+            <h6>{t(title)}</h6>
+            {content && <Content>{t(content)}</Content>}
+            <ServiceWrapper>
+              <Row justify="space-between">
+                {typeof section === 'object' &&
+                  section.map((item: any, id: number) => {
+                    return (
+                      <Col key={id} span={11}>
+                        <SvgIcon src={item.icon} width="60px" height="60px" />
+                        <MinTitle>{t(item.title)}</MinTitle>
+                        <MinPara>{t(item.content)}</MinPara>
+                      </Col>
+                    )
+                  })}
+              </Row>
+            </ServiceWrapper>
+          </ContentWrapper>
+        </Col>
+        <Col lg={11} md={11} sm={11} xs={24}>
+          <Carousel
+            // autoplay
+            dotPosition="bottom"
+            afterChange={(e) => {
+              // document.body.style.backgroundColor = colors[e]
+              document.body.style.transition = '0.5s'
+            }}
+          >
+            <CarouselItem src="/img/svg/1.png" />
+            <CarouselItem src="/img/svg/3.png" />
+            <CarouselItem src="/img/svg/7.png" />
+            <CarouselItem src="/img/svg/10.png" />
+            <CarouselItem src="/img/svg/15.png" />
+            <CarouselItem src="/img/svg/16.png" />
+          </Carousel>
+        </Col>
+      </Row>
     </div>
   )
 }

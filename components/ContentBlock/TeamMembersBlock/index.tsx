@@ -18,31 +18,29 @@ interface TeamMembersBlockTypes {
 const TeamMembersBlock = ({ title, t }: TeamMembersBlockTypes) => {
   return (
     <MiddleBlockSection>
-      <Slide direction="left">
-        <Row
-          justify="center"
-          align="middle"
-          gutter={{ xs: 0, sm: 0, md: 20, lg: 20 }}
-        >
-          <Col lg={24} md={24} sm={24} xs={24}>
-            <h6>{t(title)}</h6>
-          </Col>
+      <Row
+        justify="center"
+        align="middle"
+        gutter={{ xs: 0, sm: 0, md: 20, lg: 20 }}
+      >
+        <Col lg={24} md={24} sm={24} xs={24}>
+          <h6>{t(title)}</h6>
+        </Col>
 
-          {teamMembes.map((member) => {
-            return (
-              <Col lg={6} md={6} sm={12} xs={24} key={member.image}>
-                <Space size={20}>
-                  <ImageCard key={member.image}>
-                    <Image src={member.image} />
-                    <MemberName>{member.name}</MemberName>
-                    <Content>{member.title}</Content>
-                  </ImageCard>
-                </Space>
-              </Col>
-            )
-          })}
-        </Row>
-      </Slide>
+        {teamMembes.map((member) => {
+          return (
+            <Col lg={6} md={6} sm={12} xs={24} key={member.image}>
+              <Space size={20}>
+                <ImageCard key={member.image}>
+                  <Image src={member.image} />
+                  <MemberName>{member.name}</MemberName>
+                  <Content>{member.title}</Content>
+                </ImageCard>
+              </Space>
+            </Col>
+          )
+        })}
+      </Row>
     </MiddleBlockSection>
   )
 }

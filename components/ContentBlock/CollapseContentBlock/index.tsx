@@ -20,29 +20,27 @@ const CollapseContentBlock = ({
 }: ContentBlockProps) => {
   return (
     <MiddleBlockSection>
-      <Slide direction="right">
-        <Row justify="center" align="middle">
-          <ConditionalWrapper
-            condition={contentWrapper}
-            wrapper={(children) => <ContentWrapper>{children}</ContentWrapper>}
-          >
-            <Col lg={24} md={24} sm={24} xs={24}>
-              <h6>{t(title)}</h6>
-              <Collapse accordion>
-                <Panel header="This is panel header 1" key="1">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 2" key="2">
-                  <p>{text}</p>
-                </Panel>
-                <Panel header="This is panel header 3" key="3">
-                  <p>{text}</p>
-                </Panel>
-              </Collapse>
-            </Col>
-          </ConditionalWrapper>
-        </Row>
-      </Slide>
+      <Row justify="center" align="middle">
+        <ConditionalWrapper
+          condition={contentWrapper}
+          wrapper={(children) => <ContentWrapper>{children}</ContentWrapper>}
+        >
+          <Col lg={24} md={24} sm={24} xs={24}>
+            <h6>{t(title)}</h6>
+            <Collapse accordion>
+              <Panel header="This is panel header 1" key="1">
+                <p>{text}</p>
+              </Panel>
+              <Panel header="This is panel header 2" key="2">
+                <p>{text}</p>
+              </Panel>
+              <Panel header="This is panel header 3" key="3">
+                <p>{text}</p>
+              </Panel>
+            </Collapse>
+          </Col>
+        </ConditionalWrapper>
+      </Row>
     </MiddleBlockSection>
   )
 }
